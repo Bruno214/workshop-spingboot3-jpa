@@ -11,10 +11,11 @@ import com.educandoweb.course.entities.User;
 @RequestMapping(value = "/users")
 public class UserResource {
 	
-	// end point para acessar os usuarios
+	//get point da requisicao
 	@GetMapping
 	public ResponseEntity<User> findAll() {
-		User u = new User(1L, "maria", "maria@gmail.com", "9999999", "12345");
+		User u = new User(1, "maria", "maria@gmail.com", "99999999", "12345");
 		return ResponseEntity.ok().body(u);
 	}
+	
 }
